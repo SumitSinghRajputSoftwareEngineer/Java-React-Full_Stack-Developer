@@ -1,0 +1,250 @@
+{
+  "main": {
+    "id": "ef00dbda65628a8c",
+    "type": "split",
+    "children": [
+      {
+        "id": "d3f87365a072e2dc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9a844dab89fa303e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spring boot annotations/Spring Boot Annotations Cheat Sheet.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Spring Boot Annotations Cheat Sheet"
+            }
+          },
+          {
+            "id": "1250aeaf373538b5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spring boot annotations/annotations/@Lob.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "@Lob"
+            }
+          },
+          {
+            "id": "6732b48e2d8daa90",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7ddae3d86f43828b",
+    "type": "split",
+    "children": [
+      {
+        "id": "e99da158d013d764",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "89a2e45ae93c4cee",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "d638a0c13c71b900",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "58b8178139f3725e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "cf35640cdd55fd9f",
+    "type": "split",
+    "children": [
+      {
+        "id": "14ee46389f3ab1c0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "24308968befd6f6d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Logging in Java/Content/Spring Boot Default Log Format.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Spring Boot Default Log Format"
+            }
+          },
+          {
+            "id": "fe0347808dcf010b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Logging in Java/Content/Spring Boot Default Log Format.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Spring Boot Default Log Format"
+            }
+          },
+          {
+            "id": "e1ba6c3b1dbb7cac",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "036ea6fe371b88a3",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "45ef8d5a8f1d96ed",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Logging in Java/Content/Spring Boot Default Log Format.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Spring Boot Default Log Format"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "graph:Open graph view": false,
+      "switcher:Open quick switcher": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "1250aeaf373538b5",
+  "lastOpenFiles": [
+    "Spring boot annotations/annotations/@Transient.md",
+    "Spring boot annotations/annotations/@Lob.md",
+    "Spring boot annotations/Spring Boot Annotations Cheat Sheet.md",
+    "Spring boot annotations/annotations/@Column.md",
+    "Spring boot annotations/annotations/@GeneratedValue.md",
+    "Spring boot annotations/annotations/@Id.md",
+    "Spring boot annotations/annotations/@Table.md",
+    "Spring boot annotations/annotations/@Entity.md",
+    "Spring boot annotations/annotations/@CreditCardNumber.md",
+    "Spring boot annotations/annotations/@URL.md",
+    "Spring boot annotations/annotations/@Range.md",
+    "Spring boot annotations/annotations/@Length.md",
+    "Spring boot annotations/annotations/@Null.md",
+    "Spring boot annotations/annotations/@AssertFalse.md",
+    "Spring boot annotations/annotations/@AssertTrue.md",
+    "Spring boot annotations/annotations/@DecimalMax.md",
+    "Spring boot annotations/annotations/@DecimalMin.md",
+    "Spring boot annotations/annotations/@Digits.md",
+    "Spring boot annotations/annotations/@FutureOrPresent.md",
+    "Spring boot annotations/annotations/@Future.md",
+    "Spring boot annotations/annotations/@PastOrPresent.md",
+    "Spring boot annotations/annotations/@Past.md",
+    "Spring boot annotations/annotations/@Pattern.md",
+    "Spring boot annotations/annotations/@Email.md",
+    "Spring boot annotations/annotations/@NegativeOrZero.md",
+    "Spring boot annotations/annotations/@Negative.md",
+    "Apache Kafka/Content/Untitled",
+    "Apache Kafka/Content",
+    "Apache Kafka",
+    "MultiThreading in Java/Content",
+    "MultiThreading in Java",
+    "Spring boot annotations/annotations",
+    "Spring boot annotations",
+    "React.js/content",
+    "React.js",
+    "Logging in Java/Content"
+  ]
+}

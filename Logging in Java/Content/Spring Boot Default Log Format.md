@@ -1,0 +1,973 @@
+# Spring Boot Default Log Format
+
+> **Goal:** Understand the default log format used by Spring Boot, how to read log output, what each component means, how Spring Boot generates log messages, the significance of Timestamp, Log Level, Process ID, Thread Name, Logger Name, and Message, along with real-world examples, troubleshooting techniques, and interview concepts.
+
+---
+
+# 1. What is Log Format?
+
+Whenever a log is generated:
+
+```java
+log.info("Application Started");
+```
+
+Spring Boot does not simply print:
+
+```text
+Application Started
+```
+
+Instead, it automatically adds useful information.
+
+Example:
+
+```text
+2026-06-15 10:30:25 INFO 1234 --- [main]
+com.company.Application : Application Started
+```
+
+This structure is called:
+
+```text
+Log Format
+```
+
+---
+
+## Definition
+
+> A Log Format is the predefined structure used to display log information in a readable and meaningful way.
+
+---
+
+# Why Do We Need Log Formats?
+
+Without formatting:
+
+```text
+Application Started
+
+Database Connected
+
+Order Created
+```
+
+Difficult to understand:
+
+```text
+When?
+Where?
+Which Thread?
+Which Class?
+Severity?
+```
+
+---
+
+With formatting:
+
+```text
+2026-06-15 10:30:25 INFO 1234 --- [main]
+com.company.Application : Application Started
+```
+
+Everything becomes clear.
+
+---
+
+# 2. Default Log Format in Spring Boot
+
+Spring Boot automatically configures a default log format using:
+
+```text
+SLF4J
++
+Logback
+```
+
+---
+
+## Example
+
+```text
+2026-06-15 10:30:25 INFO 1234 --- [main]
+com.company.Application : Application Started
+```
+
+---
+
+# Simplified View
+
+```text
+Timestamp
+Level
+PID
+Thread
+Logger
+Message
+```
+
+---
+
+# Visual Representation
+
+```text
+2026-06-15 10:30:25 INFO 1234 --- [main]
+com.company.Application : Application Started
+
+│                    │    │        │
+│                    │    │        └── Message
+│                    │    └────────── Logger Name
+│                    └─────────────── Thread Name
+└──────────────────────── Timestamp
+```
+
+---
+
+# Complete Structure
+
+```text
+Timestamp
+     ↓
+Log Level
+     ↓
+Process ID
+     ↓
+Separator
+     ↓
+Thread Name
+     ↓
+Logger Name
+     ↓
+Message
+```
+
+---
+
+# 3. Understanding Log Output
+
+Consider the following log:
+
+```text
+2026-06-15 10:30:25 INFO 1234 --- [main]
+com.company.Application : Application Started
+```
+
+Let's break it down component by component.
+
+---
+
+# Component 1: Timestamp
+
+Example:
+
+```text
+2026-06-15 10:30:25
+```
+
+---
+
+## What is Timestamp?
+
+Timestamp indicates:
+
+```text
+Date
+Time
+```
+
+when the log was generated.
+
+---
+
+## Format
+
+```text
+YYYY-MM-DD HH:mm:ss
+```
+
+---
+
+## Example
+
+```text
+2026-06-15 10:30:25
+```
+
+means:
+
+```text
+15 June 2026
+10:30 AM
+25 Seconds
+```
+
+---
+
+# Why Timestamp Is Important?
+
+Helps determine:
+
+```text
+When Error Occurred
+When Application Started
+Request Duration
+Event Sequence
+```
+
+---
+
+# Real Example
+
+```text
+10:00:00 Login Request
+
+10:00:02 Payment Started
+
+10:00:05 Payment Successful
+```
+
+Timestamp helps identify:
+
+```text
+Execution Timeline
+```
+
+---
+
+# Component 2: Log Level
+
+Example:
+
+```text
+INFO
+```
+
+---
+
+## What is Log Level?
+
+Indicates the severity of the log.
+
+---
+
+Possible Values:
+
+```text
+TRACE
+DEBUG
+INFO
+WARN
+ERROR
+```
+
+---
+
+## Example
+
+```text
+INFO
+```
+
+means:
+
+```text
+Normal Business Event
+```
+
+---
+
+Example:
+
+```text
+ERROR
+```
+
+means:
+
+```text
+Failure Occurred
+```
+
+---
+
+# Real Example
+
+```text
+INFO  Application Started
+
+WARN  Database Response Slow
+
+ERROR Database Connection Failed
+```
+
+---
+
+# Why Log Level Matters?
+
+Helps engineers quickly identify:
+
+```text
+Normal Events
+Warnings
+Critical Errors
+```
+
+---
+
+# Component 3: Process ID (PID)
+
+Example:
+
+```text
+1234
+```
+
+---
+
+## What is PID?
+
+PID stands for:
+
+```text
+Process Identifier
+```
+
+---
+
+Every running Java application receives a unique process ID from the operating system.
+
+---
+
+Example:
+
+```text
+Java Process
+       ↓
+PID = 1234
+```
+
+---
+
+# Why PID Is Useful?
+
+Suppose multiple applications run on the same server:
+
+```text
+Order Service
+
+Payment Service
+
+Inventory Service
+```
+
+Each receives a different PID.
+
+---
+
+Example:
+
+```text
+Order Service      → PID 1234
+
+Payment Service    → PID 5678
+
+Inventory Service  → PID 7890
+```
+
+---
+
+This helps identify:
+
+```text
+Which Process Generated The Log
+```
+
+---
+
+# Component 4: Separator
+
+Example:
+
+```text
+---
+```
+
+---
+
+## Purpose
+
+Purely visual.
+
+Used to improve readability.
+
+---
+
+Example:
+
+```text
+INFO 1234 --- [main]
+```
+
+---
+
+No business significance.
+
+---
+
+Simply separates:
+
+```text
+PID
+```
+
+from
+
+```text
+Thread Information
+```
+
+---
+
+# Component 5: Thread Name
+
+Example:
+
+```text
+[main]
+```
+
+---
+
+## What is a Thread?
+
+A thread is a unit of execution within a process.
+
+---
+
+Every Spring Boot application starts with:
+
+```text
+main Thread
+```
+
+---
+
+# Example
+
+```text
+[main]
+```
+
+means:
+
+```text
+Log Generated By Main Thread
+```
+
+---
+
+# Real Thread Examples
+
+Application Startup:
+
+```text
+[main]
+```
+
+---
+
+Tomcat Request:
+
+```text
+[http-nio-8080-exec-1]
+```
+
+---
+
+Scheduler Job:
+
+```text
+[scheduling-1]
+```
+
+---
+
+Async Method:
+
+```text
+[task-1]
+```
+
+---
+
+# Why Thread Name Is Important?
+
+Helps identify:
+
+```text
+Request Processing Thread
+Async Execution
+Background Jobs
+Concurrency Issues
+```
+
+---
+
+# Real Example
+
+```text
+INFO [http-nio-8080-exec-3]
+Order Created
+```
+
+means:
+
+```text
+Request Thread Created Order
+```
+
+---
+
+# Component 6: Logger Name
+
+Example:
+
+```text
+com.company.Application
+```
+
+---
+
+## What is Logger Name?
+
+Represents the class that generated the log.
+
+---
+
+Example:
+
+```java
+log.info("Application Started");
+```
+
+inside:
+
+```java
+Application.java
+```
+
+produces:
+
+```text
+com.company.Application
+```
+
+---
+
+# Why Logger Name Matters?
+
+Helps identify:
+
+```text
+Which Class Generated Log
+```
+
+---
+
+Example
+
+```text
+com.company.service.EmployeeService
+
+com.company.controller.EmployeeController
+
+com.company.repository.EmployeeRepository
+```
+
+---
+
+Engineers can quickly locate:
+
+```text
+Source Of Log
+```
+
+---
+
+# Component 7: Message
+
+Example:
+
+```text
+Application Started
+```
+
+---
+
+## What is Message?
+
+Actual information written by the developer.
+
+---
+
+Example:
+
+```java
+log.info(
+    "Application Started"
+);
+```
+
+---
+
+Output:
+
+```text
+Application Started
+```
+
+---
+
+# Good Log Messages
+
+```java
+log.info(
+    "Employee Created Successfully"
+);
+```
+
+---
+
+```java
+log.warn(
+    "Payment Gateway Response Slow"
+);
+```
+
+---
+
+```java
+log.error(
+    "Database Connection Failed"
+);
+```
+
+---
+
+# Bad Log Messages
+
+```java
+log.info("Done");
+```
+
+---
+
+```java
+log.info("OK");
+```
+
+---
+
+Reason:
+
+```text
+Not Descriptive
+```
+
+---
+
+# Good Practice
+
+```java
+log.info(
+    "Employee Created Successfully"
+);
+```
+
+---
+
+# 4. Complete Log Breakdown
+
+Log:
+
+```text
+2026-06-15 10:30:25 INFO 1234 --- [main]
+com.company.Application : Application Started
+```
+
+---
+
+Breakdown:
+
+| Component | Value | Meaning |
+|------------|---------|----------|
+| Timestamp | 2026-06-15 10:30:25 | When log was generated |
+| Log Level | INFO | Severity |
+| PID | 1234 | Process ID |
+| Separator | --- | Readability |
+| Thread Name | main | Executing Thread |
+| Logger Name | com.company.Application | Source Class |
+| Message | Application Started | Actual Log Message |
+
+---
+
+# Memory Trick
+
+```text
+Timestamp
+    ↓
+When
+
+Level
+    ↓
+Severity
+
+PID
+    ↓
+Which Process
+
+Thread
+    ↓
+Which Thread
+
+Logger
+    ↓
+Which Class
+
+Message
+    ↓
+What Happened
+```
+
+---
+
+# 5. Real Spring Boot Startup Logs
+
+Example:
+
+```text
+2026-06-15 10:30:25 INFO 1234 --- [main]
+com.company.Application :
+Starting Application
+```
+
+---
+
+```text
+2026-06-15 10:30:27 INFO 1234 --- [main]
+com.company.Application :
+Started Application in 2.4 seconds
+```
+
+---
+
+These logs indicate:
+
+```text
+Application Startup Sequence
+```
+
+---
+
+# 6. Real Web Request Example
+
+Controller:
+
+```java
+log.info(
+    "Creating Employee"
+);
+```
+
+---
+
+Output:
+
+```text
+2026-06-15 11:00:10 INFO 1234
+--- [http-nio-8080-exec-1]
+com.company.EmployeeController :
+Creating Employee
+```
+
+---
+
+Breakdown:
+
+```text
+11:00:10
+   ↓
+Request Time
+
+INFO
+   ↓
+Normal Event
+
+http-nio-8080-exec-1
+   ↓
+Request Thread
+
+EmployeeController
+   ↓
+Source Class
+
+Creating Employee
+   ↓
+Message
+```
+
+---
+
+# 7. Why Understanding Log Format Is Important?
+
+Helps during:
+
+```text
+Production Support
+Incident Investigation
+Root Cause Analysis
+Performance Monitoring
+Microservice Troubleshooting
+```
+
+---
+
+Example:
+
+```text
+ERROR Database Connection Failed
+```
+
+Using log format we can identify:
+
+```text
+When Failure Happened
+
+Which Service Generated It
+
+Which Thread Executed It
+
+Which Process Was Running
+```
+
+---
+
+# 8. Common Interview Questions
+
+### Q1. What is the default logging framework used by Spring Boot?
+
+```text
+Logback
+```
+
+---
+
+### Q2. What is the default logging level?
+
+```text
+INFO
+```
+
+---
+
+### Q3. What does PID mean?
+
+```text
+Process Identifier
+```
+
+---
+
+### Q4. What does [main] represent?
+
+```text
+Main Thread
+```
+
+---
+
+### Q5. What does Logger Name indicate?
+
+The class that generated the log.
+
+---
+
+### Q6. Why is Timestamp important?
+
+To determine:
+
+```text
+When Events Occurred
+```
+
+---
+
+### Q7. Which component contains developer-written information?
+
+```text
+Message
+```
+
+---
+
+# Quick Revision
+
+```text
+Spring Boot Default Log Format
+------------------------------
+
+Example
+
+2026-06-15 10:30:25 INFO 1234 --- [main]
+com.company.Application :
+Application Started
+
+Components
+
+Timestamp
+    ↓
+When
+
+Log Level
+    ↓
+Severity
+
+PID
+    ↓
+Which Process
+
+Thread Name
+    ↓
+Which Thread
+
+Logger Name
+    ↓
+Which Class
+
+Message
+    ↓
+What Happened
+
+Common Threads
+
+main
+http-nio-8080-exec-1
+task-1
+scheduling-1
+
+Remember
+
+Timestamp → When
+
+Level → Severity
+
+PID → Process
+
+Thread → Execution Thread
+
+Logger → Source Class
+
+Message → Actual Event
+```
