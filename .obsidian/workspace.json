@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React.js/content/useState.md",
-                "mode": "source",
+                "file": "Git/Git Complete Notes 🚀.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "useState"
+              "title": "Git Complete Notes 🚀"
             }
           },
           {
@@ -45,7 +45,8 @@
               "title": "Graph view"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -207,8 +208,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "c1907a63b1f8f402",
+  "active": "0556422e4fae8854",
   "lastOpenFiles": [
+    "Untitled.md",
+    "Git/Git Complete Notes 🚀.md",
+    "Git",
+    "Spring boot annotations/Spring Boot Annotations Cheat Sheet.md",
     "React.js/React.js Complete.md",
     "React.js/content/useState.md",
     "React.js/content/Forms.md",
@@ -232,9 +237,6 @@
     "Logging in Java/Content/Logging Best Practices.md",
     "Logging in Java/Content/Security Best Practices.md",
     "Logging in Java/Content/Dynamic Log Level Management.md",
-    "Logging in Java/Content/Spring Boot Actuator Logging.md",
-    "Logging in Java/Content/Logging in Microservices.md",
-    "Logging in Java/Content/Performance Logging.md",
     "Spring boot annotations/annotations/Untitled",
     "Apache Kafka/Content/Untitled",
     "Apache Kafka/Content",
@@ -243,7 +245,6 @@
     "MultiThreading in Java",
     "Spring boot annotations/annotations",
     "Spring boot annotations",
-    "React.js/content",
-    "React.js"
+    "React.js/content"
   ]
 }
