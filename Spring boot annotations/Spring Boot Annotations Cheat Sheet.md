@@ -173,57 +173,57 @@
 [[@GeneratedValue]]
 [[@Column]]
 [[@Transient]]
-@Lob
-@Version
+[[@Lob]]
+[[@Version]]
 
 ## Relationships
 
 
-@OneToOne
-@OneToMany
-@ManyToOne
-@ManyToMany
+[[@OneToOne]]
+[[@OneToMany]]
+[[@ManyToOne]]
+[[@ManyToMany]]
 
-@JoinColumn
-@JoinColumns
-@JoinTable
+[[@JoinColumn]]
+[[@JoinColumns]]
+[[@JoinTable]]
 
-@MapsId
+[[@MapsId]]
 
 ## Inheritance
 
-@Inheritance
-@DiscriminatorColumn
-@DiscriminatorValue
-@MappedSuperclass
+[[@Inheritance]]
+[[@DiscriminatorColumn]]
+[[@DiscriminatorValue]]
+[[@MappedSuperclass]]
 
 ## Fetching
 
-@EntityGraph
+[[@EntityGraph]]
 
 ## Auditing
 
-@EnableJpaAuditing
-@CreatedDate
-@LastModifiedDate
-@CreatedBy
-@LastModifiedBy
-@EntityListeners
+[[@EnableJpaAuditing]]
+[[@CreatedDate]]
+[[@LastModifiedDate]]
+[[@CreatedBy]]
+[[@LastModifiedBy]]
+[[@EntityListeners]]
 
 ## Query Related
 
-@Query
-@Modifying
-@Procedure
-@Lock
-@Param
+[[@Query]]
+[[@Modifying]]
+[[@Procedure]]
+[[@Lock]]
+[[@Param]]
 
 ---
 
 # 8. Transaction Management
 
-@Transactional
-@EnableTransactionManagement
+[[@Transactional]]
+[[@EnableTransactionManagement]]
 
 ## Transaction Attributes
 
@@ -240,22 +240,20 @@ readOnly
 
 # 9. AOP (Aspect Oriented Programming)
 
-@Aspect
-@EnableAspectJAutoProxy
+[[@Aspect]]
+[[@EnableAspectJAutoProxy]]
 
 ## Advice Types
 
-@Before
-@After
-@AfterReturning
-@AfterThrowing
-@Around
+[[@Before]]
+[[@After]]
+[[@AfterReturning]]
+[[@AfterThrowing]]
+[[@Around]]
 
 ## Pointcuts
 
-```java
-@Pointcut
-```
+[[@Pointcut]]
 
 ---
 
@@ -263,69 +261,56 @@ readOnly
 
 ## Configuration
 
-```java
-@EnableWebSecurity
-@EnableMethodSecurity
-```
+[[@EnableWebSecurity]]
+[[@EnableMethodSecurity]]
 
 ## Authorization
 
-```java
-@PreAuthorize
-@PostAuthorize
+[[@PreAuthorize]]
+[[@PostAuthorize]]
 
-@PreFilter
-@PostFilter
+[[@PreFilter]]
+[[@PostFilter]]
 
-@Secured
-@RolesAllowed
-```
+[[@Secured]]
+[[@RolesAllowed]]
 
 ## Authentication Principal
 
-```java
-@AuthenticationPrincipal
-```
+[[@AuthenticationPrincipal]]
 
 ---
 
 # 11. Scheduling
 
-```java
-@EnableScheduling
-@Scheduled
-```
+
+[[@EnableScheduling]]
+[[@Scheduled]]
 
 ---
 
 # 12. Async Processing
 
-```java
-@EnableAsync
-@Async
-```
+[[@EnableAsync]]
+[[@Async]]
 
 ---
 
 # 13. Caching
 
-```java
-@EnableCaching
+[[@EnableCaching]]
 
-@Cacheable
-@CachePut
-@CacheEvict
-@Caching
-@CacheConfig
-```
+[[@Cacheable]]
+[[@CachePut]]
+[[@CacheEvict]]
+[[@Caching]]
+[[@CacheConfig]]
 
 ---
 
 # 14. Spring Events
 
-```java
-@EventListener
-```
+[[@EventListener]]
 
 ---
 
@@ -333,61 +318,45 @@ readOnly
 
 ## Spring Boot Testing
 
-```java
-@SpringBootTest
-@TestConfiguration
-```
+[[@SpringBootTest]]
+[[@TestConfiguration]]
 
 ## MVC Testing
 
-```java
-@WebMvcTest
-@AutoConfigureMockMvc
-```
+[[@WebMvcTest]]
+[[@AutoConfigureMockMvc]]
 
 ## JPA Testing
 
-```java
-@DataJpaTest
-```
+[[@DataJpaTest]]
 
 ## JDBC Testing
 
-```java
-@JdbcTest
-```
+[[@JdbcTest]]
 
 ## JSON Testing
 
-```java
-@JsonTest
-```
+[[@JsonTest]]
 
 ## REST Client Testing
 
-```java
-@RestClientTest
-```
+[[@RestClientTest]]
 
 ## Mocking
 
-```java
-@MockBean
-@SpyBean
-```
+[[@MockBean]]
+[[@SpyBean]]
 
 ## JUnit
 
-```java
-@Test
-@BeforeEach
-@AfterEach
-@BeforeAll
-@AfterAll
-@DisplayName
-@Nested
-@ParameterizedTest
-```
+[[@Test]]
+[[@BeforeEach]]
+[[@AfterEach]]
+[[@BeforeAll]]
+[[@AfterAll]]
+[[@DisplayName]]
+[[@Nested]]
+[[@ParameterizedTest]]
 
 ---
 
@@ -395,33 +364,25 @@ readOnly
 
 ## Service Discovery
 
-```java
-@EnableDiscoveryClient
-@EnableEurekaClient
-```
+[[@EnableDiscoveryClient]]
+[[@EnableEurekaClient]]
 
 ## Circuit Breaker
 
-```java
-@CircuitBreaker
-@Retry
-@RateLimiter
-@Bulkhead
-@TimeLimiter
-```
+[[@CircuitBreaker]]
+[[@Retry]]
+[[@RateLimiter]]
+[[@Bulkhead]]
+[[@TimeLimiter]]
 
 ## Feign Client
 
-```java
-@EnableFeignClients
-@FeignClient
-```
+[[@EnableFeignClients]]
+[[@FeignClient]]
 
 ## Load Balancing
 
-```java
-@LoadBalanced
-```
+[[@LoadBalanced]]
 
 ---
 
@@ -429,18 +390,14 @@ readOnly
 
 ## Kafka
 
-```java
-@EnableKafka
-@KafkaListener
-@KafkaHandler
-```
+[[@EnableKafka]]
+[[@KafkaListener]]
+[[@KafkaHandler]]
 
 ## RabbitMQ
 
-```java
-@EnableRabbit
-@RabbitListener
-```
+[[@EnableRabbit]]
+[[@RabbitListener]]
 
 ---
 
@@ -448,29 +405,23 @@ readOnly
 
 ## Configuration
 
-```java
-@EnableWebSocket
-@EnableWebSocketMessageBroker
-```
+[[@EnableWebSocket]]
+[[@EnableWebSocketMessageBroker]]
 
 ## Messaging
 
-```java
-@MessageMapping
-@SendTo
-@SendToUser
-```
+[[@MessageMapping]]
+[[@SendTo]]
+[[@SendToUser]]
 
 ---
 
 # 19. Actuator
 
-```java
-@Endpoint
-@ReadOperation
-@WriteOperation
-@DeleteOperation
-```
+[[@Endpoint]]
+[[@ReadOperation]]
+[[@WriteOperation]]
+[[@DeleteOperation]]
 
 ---
 
@@ -478,98 +429,86 @@ readOnly
 
 ## Configuration
 
-```java
-@EnableBatchProcessing
-```
+[[@EnableBatchProcessing]]
 
 ## Batch Components
 
-```java
-@StepScope
-@JobScope
-@BeforeJob
-@AfterJob
-@BeforeStep
-@AfterStep
-```
+[[@StepScope]]
+[[@JobScope]]
+[[@BeforeJob]]
+[[@AfterJob]]
+[[@BeforeStep]]
+[[@AfterStep]]
 
 ---
 
 # 21. Conditional Annotations
 
-```java
-@Conditional
+[[@Conditional]]
 
-@ConditionalOnBean
-@ConditionalOnMissingBean
+[[@ConditionalOnBean]]
+[[@ConditionalOnMissingBean]]
 
-@ConditionalOnClass
-@ConditionalOnMissingClass
+[[@ConditionalOnClass]]
+[[@ConditionalOnMissingClass]]
 
-@ConditionalOnProperty
+[[@ConditionalOnProperty]]
 
-@ConditionalOnResource
+[[@ConditionalOnResource]]
 
-@ConditionalOnJava
+[[@ConditionalOnJava]]
 
-@ConditionalOnExpression
+[[@ConditionalOnExpression]]
 
-@ConditionalOnWebApplication
-@ConditionalOnNotWebApplication
-```
+[[@ConditionalOnWebApplication]]
+[[@ConditionalOnNotWebApplication]]
 
 ---
 
 # 22. Servlet & Filter Related
 
-```java
-@WebServlet
-@WebFilter
-@WebListener
+[[@WebServlet]]
+[[@WebFilter]]
+[[@WebListener]]
 
-@ServletComponentScan
-```
+[[@ServletComponentScan]]
 
 ---
 
 # 23. Lombok Annotations
 
-```java
-@Getter
-@Setter
+[[@Getter]]
+[[@Setter]]
 
-@Data
+[[@Data]]
 
-@Builder
+[[@Builder]]
 
-@NoArgsConstructor
-@AllArgsConstructor
-@RequiredArgsConstructor
+[[@NoArgsConstructor]]
+[[@AllArgsConstructor]]
+[[@RequiredArgsConstructor]]
 
-@ToString
-@EqualsAndHashCode
+[[@ToString]]
+[[@EqualsAndHashCode]]
 
-@Slf4j
+[[@Slf4j]]
 
-@Value
+[[@Value - lombok]]
 
-@SneakyThrows
-```
+[[@SneakyThrows]]
 
 ---
 
 # 24. OpenAPI / Swagger
 
-```java
-@OpenAPIDefinition
-@Tag
-@Operation
-@ApiResponse
-@ApiResponses
-@Parameter
-@Schema
-@SecurityRequirement
-```
+[[@OpenAPIDefinition]]
+[[@Tag]]
+[[@Operation]]
+[[@ApiResponse]]
+[[@ApiResponses]]
+[[@Parameter]]
+[[@Schema]]
+[[@SecurityRequirement]]
 
 ---
 

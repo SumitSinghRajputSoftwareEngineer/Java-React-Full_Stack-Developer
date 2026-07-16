@@ -165,7 +165,7 @@ logging.pattern.console=
 - Custom Console Patterns
     
 
-## 10. File Logging
+## 10. [[File Logging]]
 
 - Enable File Logging
     
@@ -184,7 +184,7 @@ logging.file.path=/logs
 - File Logging Configuration
     
 
-## 11. Log Rotation
+## 11. [[Log Rotation]]
 
 - Rolling Log Files
     
@@ -200,7 +200,7 @@ logging.logback.rollingpolicy.max-file-size
 logging.logback.rollingpolicy.max-history
 ```
 
-## 12. Logback Fundamentals
+## 12. [[Logback Fundamentals]]
 
 - What is Logback?
     
@@ -217,7 +217,7 @@ logging.logback.rollingpolicy.max-history
 - Logback Architecture
     
 
-## 13. Logback Configuration File
+## 13. [[Logback Configuration File]]
 
 - logback.xml
     
@@ -233,7 +233,7 @@ logging.logback.rollingpolicy.max-history
 </configuration>
 ```
 
-## 14. Appenders in Logback
+## 14. [[Appenders in Logback]]
 
 - ConsoleAppender
     
@@ -248,7 +248,7 @@ logging.logback.rollingpolicy.max-history
 - Custom Appenders
     
 
-## 15. Encoders and Layouts
+## 15. [[Encoders and Layouts]]
 
 - PatternLayoutEncoder
     
@@ -257,7 +257,7 @@ logging.logback.rollingpolicy.max-history
 - Formatting Log Messages
     
 
-## 16. Asynchronous Logging
+## 16. [[Asynchronous Logging]]
 
 - Why Async Logging?
     
@@ -268,7 +268,7 @@ logging.logback.rollingpolicy.max-history
 - Configuration Example
     
 
-## 17. Structured Logging
+## 17. [[Structured Logging]]
 
 - What is Structured Logging?
     
@@ -286,7 +286,7 @@ logging.logback.rollingpolicy.max-history
 - Datadog
     
 
-## 18. Logging Exceptions Properly
+## 18. [[Logging Exceptions Properly]]
 
 ### Correct Way
 
@@ -301,7 +301,7 @@ log.error("Error while saving employee", ex);
 - Root Cause Analysis
     
 
-## 19. MDC (Mapped Diagnostic Context)
+## 19. [[MDC (Mapped Diagnostic Context)]]
 
 - What is MDC?
     
@@ -318,7 +318,7 @@ log.error("Error while saving employee", ex);
 MDC.put("requestId", requestId);
 ```
 
-## 20. Correlation ID Logging
+## 20. [[Correlation ID Logging]]
 
 - Why Correlation IDs?
     
@@ -334,7 +334,7 @@ MDC.put("requestId", requestId);
 - Interceptor
     
 
-## 21. Logging in REST APIs
+## 21. [[Logging in REST APIs]]
 
 - Request Logging
     
@@ -354,7 +354,7 @@ MDC.put("requestId", requestId);
 - AOP
     
 
-## 22. Logging with Spring AOP
+## 22. [[Logging with Spring AOP]]
 
 - Aspect-Oriented Logging
     
@@ -379,7 +379,7 @@ MDC.put("requestId", requestId);
 - @Around
     
 
-## 23. Performance Logging
+## 23. [[Performance Logging]]
 
 - Execution Time Logging
     
@@ -393,7 +393,7 @@ long start = System.currentTimeMillis();
 - Performance Metrics
     
 
-## 24. Logging in Microservices
+## 24. [[Logging in Microservices]]
 
 - Distributed Logging
     
@@ -415,7 +415,7 @@ long start = System.currentTimeMillis();
 - Zipkin
     
 
-## 25. Spring Boot Actuator Logging
+## 25. [[Spring Boot Actuator Logging]]
 
 - Loggers Endpoint
     
@@ -429,7 +429,7 @@ long start = System.currentTimeMillis();
 - Monitoring Logs
     
 
-## 26. Dynamic Log Level Management
+## 26. [[Dynamic Log Level Management]]
 
 - Runtime Log Level Changes
     
@@ -441,7 +441,7 @@ POST /actuator/loggers
 - Production Use Cases
     
 
-## 27. Security Best Practices
+## 27. [[Security Best Practices]]
 
 - Avoid Logging Sensitive Data
     
@@ -459,7 +459,7 @@ POST /actuator/loggers
 - Data Masking Techniques
     
 
-## 28. Logging Best Practices
+## 28. [[Logging Best Practices]]
 
 - What to Log
     
@@ -472,7 +472,7 @@ POST /actuator/loggers
 - Production Logging Guidelines
     
 
-## 29. Common Logging Mistakes
+## 29. [[Common Logging Mistakes]]
 
 - Excessive Logging
     
@@ -485,7 +485,7 @@ POST /actuator/loggers
 - Duplicate Logs
     
 
-## 30. Monitoring and Log Analysis
+## 30. [[Monitoring and Log Analysis]]
 
 - ELK Stack
     
@@ -502,7 +502,7 @@ POST /actuator/loggers
 - Datadog
     
 
-## 31. Logging Interview Questions
+## 31. [[Logging Interview Questions]]
 
 ### Beginner
 
@@ -531,7 +531,7 @@ POST /actuator/loggers
 - Centralized Logging Architecture?
     
 
-## 32. Real-World Production Logging Strategy
+## 32. [[Real-World Production Logging Strategy]]
 
 - Development Environment
     

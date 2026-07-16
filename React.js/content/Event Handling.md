@@ -1,4 +1,4 @@
-# Event Handling
+|# Event Handling
 
 > **Goal:** Understand React Events, Synthetic Events, Event Binding, Passing Arguments to Events, Form Events, Keyboard Events, Mouse Events, Event Propagation, preventDefault(), stopPropagation(), internal working, real-world examples, best practices, and interview questions.
 

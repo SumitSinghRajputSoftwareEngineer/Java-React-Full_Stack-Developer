@@ -2160,7 +2160,7 @@ Each state behaves differently.
 
 ---
 
-# 13. Strategy Pattern
+# 13. [[Strategy Design Pattern - Behavioural Design Pattern]]
 
 ## Purpose
 
